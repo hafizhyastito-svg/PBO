@@ -1,29 +1,37 @@
 public class main {
     public static void main(String[] args) {
-     buku buku1 = new buku(null, null, 0);
-     buku1.judul = "mas pesen mie ayam seporsi sebelum mati";
-     buku1.pengarang = "Brian Khrisna";
-     buku1.tahunTerbit = 2019;
-     buku1.isDipinjam = false;
-     buku1.tampilkanDetail();
-     buku buku2 = new buku(null, null, 0);
-     buku2.judul = "Laskar pelangi";
-     buku2.pengarang = "Andrea Hirata";
-     buku2.tahunTerbit = 2005;
-     buku2.isDipinjam = false;
-     buku2.tampilkanDetail();
-     buku buku3 = new buku(null, null, 0);
-     buku3.judul = "Bumi Manusia";
-     buku3.pengarang = "Pamoedya Ananta Toer";
-     buku3.tahunTerbit = 1980;
-     buku3.isDipinjam = false;
-     buku3.tampilkanDetail();
-     buku buku4 = new buku(null, null, 0);
-     buku4.judul = "Harry Potter and the Goblet of Fire";
-     buku4.pengarang = "J.K. Rowling";
-     buku4.tahunTerbit = 2000;
-     buku4.isDipinjam = false;
-     buku4.tampilkanDetail();
+
+        // Membuat objek menu
+        MenuItem menu1 = new MenuItem();
+
+        MenuItem burger = new MenuItem("Burger Special","Makanan",35000,15);
+        MenuItem esTeh = new MenuItem("Es Teh Manis","Minuman",8000,50);
+
+        System.out.println("\n--- Data Menu Awal ---");
+
+        menu1.tampilInformasi();
+        System.out.println();
+
+        burger.tampilInformasi();
+        System.out.println();
+
+        esTeh.tampilInformasi();
+
+        System.out.println("\n--- Proses Transaksi ---");
+
+        // Burger pesan 3
+        burger.prosesTransaksi(3);
+
+        System.out.println();
+
+        // Es Teh pesan 60
+        esTeh.prosesTransaksi(60);
+
+        System.out.println("\n--- Data Menu Setelah Transaksi ---");
+
+        burger.informasiAfter();
+        System.out.println();
+
+        esTeh.informasiAfter();
     }
 }
-
